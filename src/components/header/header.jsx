@@ -31,7 +31,7 @@ export default function Header() {
           <Icon icon="globe" />
         </a>
         <a 
-          href="#"
+          href="https://github.com/treyhardin/Truman-Kit"
           class={styles.socialLink}
           target='_blank'
         >

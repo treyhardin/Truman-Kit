@@ -10,8 +10,8 @@ export default function Footer() {
       </div>
       <div class={styles.footerNavigation}>
         <div class={styles.footerLinks}>
-          <a href="#" class={styles.footerLink}>Github</a>
-          <a href="#" class={styles.footerLink}>Truman Creative</a>
+          <a href="https://github.com/treyhardin/Truman-Kit" class={styles.footerLink} target='_blank'>Github</a>
+          <a href="https://trumancreative.co/" class={styles.footerLink} target='_blank'>Truman Creative</a>
         </div>
         <div class={styles.footerInfo}>
           <p>&#169; 2024 Truman Creative Co.</p>
