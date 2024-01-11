@@ -1,0 +1,356 @@
+* {
+  box-sizing: border-box;
+  
+  --viewport-desktop: 1440; /* The width of the desktop designs */
+  --viewport-mobile: 375; /* The width of the mobile designs */
+  
+  /* The range between mobile and desktop viewport sizes */
+  --viewport-range: calc( var(--viewport-desktop) - var(--viewport-mobile) ); 
+  
+  /* Calculate how wide the current viewport is, relative to the mobile and desktop viewport sizes */
+  --viewport-percent: calc( (100vw - (var(--viewport-mobile) * 1px)) / var(--viewport-range) ); 
+  
+  /* The range between mobile and desktop font sizes */
+  --font-size-range: calc( var(--font-size-desktop) - var(--font-size-mobile) ); 
+  
+  /*   A normalization equation that takes the range in font size and maps it between our mobile breakpoint and desktop breakpoint */
+  --fluid-font-size: calc( var(--font-size-range) * var(--viewport-percent) + (var(--font-size-mobile)) * 1px );
+}
+
+:root {
+
+  /* Browser Fixes */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Typography */
+  --font-primary: 'Gambarino', Georgia, serif;
+  --font-secondary: 'Switzer', Helvetica, sans-serif;
+
+  /* Colors */
+  --color-ink: #232325; 
+  --color-subdued: #414144;
+  --color-neutral: #8E8E8E;
+  --color-light: #dfdacc;
+  --color-reverse: #FAF5E5;
+
+  --color-brand: #D8784F;
+  --color-brand-contrast: var(--color-reverse);
+  --color-brand-secondary: #D9D850;
+  --color-brand-secondary-contrast: var(--color-ink);
+
+  --color-success: #50D998;
+  --color-success-contrast: var(--color-ink);
+  --color-error: #D94745;
+  --color-error-contrast: var(--color-reverse);
+  --color-focus: #9050D9;
+
+
+  /* Spacing & Sizing */
+  --space-3xl: 120px;
+  --space-2xl: 80px;
+  --space-xl: 60px;
+  --space-lg: 40px;
+  --space-md: 30px;
+  --space-sm: 20px;
+  --space-xs: 15px;
+  --space-2xs: 10px;
+  --space-3xs: 5px;
+
+  --page-margin: var(--space-md);
+  --header-height: 80px;
+
+  /* Forms */
+  --form-field-height: 40px;
+  --form-field-color: var(--color-brand);
+  --form-field-color-contrast: var(--color-reverse);
+  --form-stroke-color: var(--color-neutral);
+  --form-gap-vertical: var(--space-xs);
+  --form-gap-horizontal: var(--space-2xs);
+
+  --form-toggle-size: 14px;
+
+  /* Buttons */
+  --button-height: var(--form-field-height);
+
+  /* Border Radius */
+  --radius-sm: 5px;
+  --radius-lg: 10px;
+  --radius-rounded: 100vw;
+
+  /* Animations */
+  --anim-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  --anim-sm: 0.3s var(--anim-easing);
+  --anim-md: 0.6s var(--anim-easing);
+  --anim-lg: 1.2s var(--anim-easing);
+
+  --anim-skew-in: skew(0, 3deg) translateY(40px);
+
+  /* Icons */
+  --icon-sm: 10px;
+  --icon-md: 18px;
+  --icon-lg: 24px;
+
+}
+
+/* Font Imports */
+
+@font-face {
+  font-family: 'Gambarino';
+  font-weight: 300;
+  font-style: normal;
+  src: 
+    local('Gambarino'),
+    url('./assets/fonts/Gambarino-Regular.otf') format("opentype"),
+    url('./assets/fonts/Gambarino-Regular.ttf') format("truetype"),
+    url('./assets/fonts/Gambarino-Regular.woff') format("woff"),
+    url('./assets/fonts/Gambarino-Regular.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Switzer';
+  font-weight: 400;
+  font-style: normal;
+  src: 
+    local('Switzer'),
+    url('./assets/fonts/Switzer-Regular.otf') format("opentype"),
+    url('./assets/fonts/Switzer-Regular.ttf') format("truetype"),
+    url('./assets/fonts/Switzer-Regular.woff') format("woff"),
+    url('./assets/fonts/Switzer-Regular.woff2') format("woff2");
+}
+
+@font-face {
+  font-family: 'Switzer';
+  font-weight: 300;
+  font-style: normal;
+  src: 
+    local('Switzer'),
+    url('./assets/fonts/Switzer-Light.otf') format("opentype"),
+    url('./assets/fonts/Switzer-Light.ttf') format("truetype"),
+    url('./assets/fonts/Switzer-Light.woff') format("woff"),
+    url('./assets/fonts/Switzer-Light.woff2') format("woff2");
+}
+
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+/* Typography Styles */
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+p,
+a,
+ul,
+.caption,
+button,
+input,
+label {
+  font-size: max( var(--fluid-font-size), calc(var(--font-size-mobile) * 1px) );
+  margin: 0;
+}
+
+h1,
+.h1 {
+  --font-size-desktop: 100;
+  --font-size-mobile: 54;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h2,
+.h2 {
+  --font-size-desktop: 80;
+  --font-size-mobile: 44;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h3,
+.h3 {
+  --font-size-desktop: 58;
+  --font-size-mobile: 38;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h4,
+.h4 {
+  --font-size-desktop: 46;
+  --font-size-mobile: 32;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h5,
+.h5 {
+  --font-size-desktop: 36;
+  --font-size-mobile: 28;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h6,
+.h6 {
+  --font-size-desktop: 26;
+  --font-size-mobile: 22;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+body {
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+  font-family: var(--font-secondary);
+  --font-size-desktop: 16;
+  --font-size-mobile: 14;
+  letter-spacing: -0.02em;
+  min-height: 100lvh;
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  font-family: var(--font-secondary);
+  --font-size-desktop: 16;
+  --font-size-mobile: 14;
+}
+
+p {
+  color: inherit;
+}
+
+.caption {
+  --font-size-desktop: 12;
+  --font-size-mobile: 12;
+}
+
+/* Buttons */
+
+button,
+input[type="submit"] {
+  --font-size-desktop: 18;
+  --font-size-mobile: 14;
+  border-radius: var(--radius-lg);
+  padding: var(--space-2xs) var(--space-sm);
+  border: 1px solid transparent;
+  font-weight: 400;
+  font-family: var(--font-secondary);
+  letter-spacing: -0.02em;
+  background-color: var(--color-brand);
+  color: var(--color-brand-contrast);
+  cursor: pointer;
+  transition: color var(--anim-sm), background-color var(--anim-sm);
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
+
+button:focus-visible,
+input[type="submit"]:focus-visible {
+  outline: 4px auto var(--color-focus);
+}
+
+
+/* Forms */
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--form-gap-vertical);
+}
+
+/* Images */
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  min-width: 0px;
+}
+
+
+/* Lenis */
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+/* Color Schemes */
+
+body[dark-mode = "false"] {
+  --color-foreground: var(--color-ink);
+  --color-foreground-secondary: var(--color-subdued);
+
+  --color-background: var(--color-reverse);
+  --color-background-secondary: var(--color-light);
+
+  --color-link: var(--color-brand);
+  --color-link-hover: var(--color-brand-secondary);
+}
+
+body[dark-mode = "true"] {
+  --color-foreground: var(--color-reverse);
+  --color-foreground-secondary: var(--color-light);
+
+  --color-background: var(--color-ink);
+  --color-background-secondary: var(--color-subdued);
+
+  --color-link: var(--color-brand);
+  --color-link-hover: var(--color-brand-secondary);
+}

@@ -1,0 +1,25 @@
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90lvh;
+  padding: var(--header-height) var(--page-margin) var(--space-xl);
+  text-align: center;
+  gap: var(--space-md);
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.heading {
+  composes: h1 from '../../index.css';
+}
+
+.subheading {
+  composes: h6 from '../../index.css';
+}
+

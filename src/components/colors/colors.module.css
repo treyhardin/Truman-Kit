@@ -1,0 +1,137 @@
+.colorsSection {
+}
+
+.colorsInner {
+  padding: var(--space-lg) var(--page-margin);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  opacity: 1;
+  transform: skew(0 0) translateY(0);
+  transition: opacity var(--anim-lg), transform var(--anim-lg);
+}
+
+.sectionTitle[data-animate="true"] {
+  transform: var(--anim-skew-in);
+  opacity: 0;
+}
+
+.colorSwatches {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.swatchesBrand {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  gap: var(--space-3xs);
+
+  & .colorSwatch {
+    aspect-ratio: 2 / 1;
+    flex: 1 1 auto;
+    /* flex-shrink: 1; */
+  }
+}
+
+.swatchesUtility {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  gap: var(--space-3xs);
+
+  & .colorSwatch {
+    /* flex: 0 1 20%; */
+    flex-shrink: 1;
+  }
+}
+
+.colorSwatch {
+  aspect-ratio: 1 / 1;
+  /* border-radius: var(--radius-rounded); */
+  border-radius: var(--radius-sm);
+  flex: 0 1 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity var(--anim-md);
+
+  &[data-animate="true"] {
+    opacity: 0;
+  }
+}
+
+.swatchTitle {
+  color: inherit;
+}
+
+.swatchCaption {
+  composes: caption from '../../index.css';
+  opacity: 0.6;
+}
+
+.swatchBrand {
+  background-color: var(--color-brand);
+  color: var(--color-brand-contrast);
+}
+
+.swatchBrandSecondary {
+  background-color: var(--color-brand-secondary);
+  color: var(--color-brand-secondary-contrast);
+}
+
+.swatchNeutral {
+  background-color: var(--color-neutral);
+  color: var(--color-ink);
+}
+
+.swatchForeground {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
+
+.swatchForegroundSecondary {
+  background-color: var(--color-foreground-secondary);
+  color: var(--color-background);
+}
+
+.swatchBackground {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  border: 1px solid var(--color-background-secondary);
+}
+
+.swatchBackgroundSecondary {
+  background-color: var(--color-background-secondary);
+  color: var(--color-foreground);
+}
+
+@media screen and (max-width: 768px) {
+
+  .swatchesBrand {
+    & .colorSwatch {
+      aspect-ratio: 1 / 1;
+    }
+  }
+
+  .swatchesUtility {
+    flex-wrap: wrap;
+  
+    & .colorSwatch {
+      aspect-ratio: 2 / 1;
+      flex: 1 0 30%;
+    }
+  }
+}

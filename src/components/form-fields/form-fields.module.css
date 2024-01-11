@@ -1,0 +1,334 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+  transition: height var(--anim-md);
+}
+
+.input {
+  composes: caption from '../../index.css';
+  position: relative;
+  height: var(--form-field-height);
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  left: calc(var(--space-2xs) - var(--space-3xs));
+  transition: top var(--anim-sm);
+  background-color: var(--color-background);
+  padding: 0 var(--space-3xs);
+  color: var(--color-foreground-secondary);
+  pointer-events: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-3xs);
+}
+
+.inputField {
+  border: 1px solid var(--form-stroke-color);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  padding: 0 var(--space-2xs);
+  height: 100%;
+  width: 100%;
+  transition: border-color var(--anim-sm);
+
+  &:hover {
+    /* outline: var(--color-foreground) solid 1px; */
+    border-color: var(--form-field-color);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    border-color: var(--color-focus);
+  }
+
+  &[data-active="true"]:invalid {
+    border-color: var(--color-error);
+  }
+
+  &[data-active="true"] + .label {
+    top: 0;
+  }
+
+}
+
+.clearButton {
+  background: linear-gradient(90deg, transparent 0%, var(--color-background) 20%);
+  padding: 0;
+  color: var(--color-foreground);
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--anim-sm);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: var(--radius-sm);
+
+  & svg {
+    width: var(--icon-md);
+    color: var(--color-foreground);
+  }
+}
+
+.inputField:hover ~ .clearButton[data-enabled="true"],
+.clearButton[data-enabled="true"]:hover{
+  opacity: 1;
+  pointer-events: all;
+  cursor: pointer;
+  background: linear-gradient(90deg, transparent 0%, var(--color-background) 20%);
+}
+
+.errorMessage {
+  background-color: var(--color-error);
+  border-radius: var(--radius-sm);
+  padding: 0.2em var(--space-2xs);
+  color: var(--color-error-contrast);
+
+  & .errorText {
+    composes: caption from '../../index.css';
+  }
+}
+
+.description {
+  composes: caption from '../../index.css';
+  color: var(--color-foreground-secondary);
+}
+
+
+/* -- Text Area Input -- */
+
+.textAreaInput {
+  height: auto;
+}
+
+.textAreaInput .label {
+  top: 0;
+}
+
+.textArea {
+  resize: none;
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  height: auto;
+  padding-block: var(--space-2xs);
+}
+
+
+/* -- Toggle Inputs -- */
+
+.toggleWrapper,
+.rangeWrapper {
+  padding: var(--space-3xs) 0;
+}
+
+.checkboxInput,
+.radioInput {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-3xs);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox:focus-visible,
+.radio:focus-visible {
+  outline: var(--color-focus) solid 1px;
+}
+
+
+/* Checkbox */
+
+.checkboxInput:hover .check {
+  background-color: var(--color-background-secondary);
+}
+
+.checkbox {
+  appearance: none;
+}
+
+.checkbox:checked {
+  opacity: 0.2;
+
+  & ~ .check {
+    background-color: var(--form-field-color);
+    border-color: var(--form-field-color);
+
+    & svg {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+}
+
+.check {
+  width: var(--form-toggle-size);
+  height: var(--form-toggle-size);
+  overflow: hidden;
+  border: 1px solid var(--form-stroke-color);
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color var(--anim-sm), border-color var(--anim-sm);
+
+  & svg {
+    opacity: 0;
+    width: 80%;
+    stroke-width: 4px;
+    translate: 0 5px;
+    transition: opacity var(--anim-sm), translate var(--anim-sm);
+    color: var(--form-field-color-contrast);
+  }
+}
+
+
+/* Radio */
+
+.radioGroup {
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-sm);
+}
+
+.legend {
+  composes: caption from '../../index.css';
+  margin: 0 0 var(--space-2xs);
+}
+
+.radio {
+  border-radius: var(--radius-rounded);
+  position: relative;
+  appearance: none;
+  background-color: var(--color-background);
+  border: 1px solid var(--form-stroke-color);
+  font: inherit;
+  color: currentColor;
+  cursor: pointer;
+  width: var(--form-toggle-size);
+  height: var(--form-toggle-size);
+  margin: 0;
+  transition: background-color var(--anim-sm);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    bottom: 2px;
+    left: 2px;
+    background-color: var(--form-field-color);
+    border-radius: var(--radius-rounded);
+    opacity: 0;
+    transition: opacity var(--anim-sm);
+  }
+
+  &:hover {
+    background-color: var(--color-background-secondary);
+  }
+
+}
+
+.radio:checked {
+  border-color: var(--form-field-color);
+
+  &::before {
+    opacity: 1;
+  }
+}
+
+
+/* -- Range Input -- */
+
+.rangeTitle {
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-3xs);
+}
+
+.rangeValue {
+  color: var(--color-foreground);
+}
+
+.rangeInput {
+  color: var(--color-foreground-secondary);
+  /* composes: caption from '../../index.css'; */
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.range {
+  --thumb-size: 20px;
+  --track-height: 2px;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  height: var(--thumb-size);
+}
+
+.range::-webkit-slider-runnable-track {
+  background-color: var(--color-background-secondary);
+  height: var(--track-height);
+  transition: background-color var(--anim-sm);
+
+}
+
+.range::-moz-range-track {
+  background-color: var(--color-background-secondary);
+  height: var(--track-height);
+  transition: background-color var(--anim-sm);
+}
+
+.range:hover::-webkit-slider-runnable-track {
+  background: var(--color-foreground-secondary);
+}
+
+.range:hover::-moz-range-track {
+  background: var(--color-foreground-secondary);
+}
+
+.range::-webkit-slider-thumb {
+  appearance: none;
+  margin-top: calc(var(--thumb-size) / 2 * -1);
+  border: 1px solid var(--color-background-secondary);
+  border-radius: var(--radius-rounded);
+  background-color: var(--form-field-color);
+  height: var(--thumb-size);
+  width: var(--thumb-size);
+  transition: border-color var(--anim-sm);
+}
+
+.range::-moz-range-thumb {
+  appearance: none;
+  border: 1px solid var(--color-background-secondary);
+  border-radius: var(--radius-rounded);
+  background-color: var(--form-field-color);
+  height: var(--thumb-size);
+  width: var(--thumb-size);
+  transition: border-color var(--anim-sm);
+}
+
+.range::-webkit-slider-thumb:hover {
+  border-color: var(--color-foreground);
+}
+
+.range::-moz-range-thumb:hover {
+  border-color: var(--color-foreground);
+}
