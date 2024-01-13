@@ -257,8 +257,8 @@ input {
 }
 
 p {
-  /* color: inherit; */
-  color: var(--color-foreground);
+  color: inherit;
+  /* color: var(--color-foreground); */
 }
 
 .caption {
