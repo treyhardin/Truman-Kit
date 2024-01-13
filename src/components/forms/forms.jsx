@@ -152,7 +152,12 @@ export default function Forms() {
           {/* <input type="file"></input> */}
 
 
-          <input type='submit' value="Submit" onClick={e => console.log(e)}/>
+          <input 
+            type='submit' 
+            value="Submit" 
+            name='Submit'
+            onClick={e => console.log(e)}
+          />
 
         </form>
 

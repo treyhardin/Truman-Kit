@@ -30,6 +30,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
+  color: var(--color-foreground);
+  background-color: var(--color-background);
+
   /* Typography */
   --font-primary: 'Gambarino', Georgia, serif;
   --font-secondary: 'Switzer', Helvetica, sans-serif;
@@ -41,7 +44,7 @@
   --color-light: #dfdacc;
   --color-reverse: #FAF5E5;
 
-  --color-brand: #D8784F;
+  --color-brand: #595bcb;
   --color-brand-contrast: var(--color-reverse);
   --color-brand-secondary: #D9D850;
   --color-brand-secondary-contrast: var(--color-ink);
@@ -254,7 +257,8 @@ input {
 }
 
 p {
-  color: inherit;
+  /* color: inherit; */
+  color: var(--color-foreground);
 }
 
 .caption {

@@ -37,25 +37,6 @@
   scale: 1;
   filter: blur(0px);
   transition: all var(--anim-lg);
-
-  & .emoji {
-    font-size: 8vw;
-  }
-
-  & .cardText {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2xs);
-  }
-
-  & .cardTitle {
-    color: var(--color-background);
-  }
-
-  & .cardDescription {
-    composes: caption from '../../index.css';
-    color: var(--color-background-secondary);
-  }
   
   &[data-animate="true"]:nth-child(1) {
     translate: 10vw 5vh;
@@ -77,3 +58,26 @@
   
 }
 
+.emoji {
+  font-size: 8vw;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.cardTitle {
+  composes: h6 from '../../index.css';
+  color: var(--color-background);
+}
+
+.cardDescription {
+  composes: caption from '../../index.css';
+  color: var(--color-background-secondary);
+}
+
+.cardTitle {
+  composes: h6 from '../../index.css';
+}

@@ -1,4 +1,3 @@
-import { createSignal } from 'solid-js'
 import './App.css'
 import Lenis from '@studio-freight/lenis'
 import Hero from './components/hero/hero'

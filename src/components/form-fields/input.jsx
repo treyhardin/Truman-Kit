@@ -125,6 +125,7 @@ export default function Input(props) {
           data-enabled={props.value() ? 'true' : 'false'}
           onClick={handleClear} 
           class={styles.clearButton}
+          title='Clear Field'
           tabindex="-1"
           // disabled={props.value() ? 'false' : 'true'}
         >

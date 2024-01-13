@@ -2,6 +2,7 @@ import { initScrollAnimation } from '../../utils/scroll-animation'
 import styles from './scroll-animations.module.css'
 
 export default function ScrollAnimations() {
+  
   return (
     <section class={styles.scrollAnimations} ref={el => initScrollAnimation(el)}>
 
