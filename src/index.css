@@ -109,10 +109,10 @@
   font-display: swap;
   src: 
     local('Gambarino'),
-    url('./fonts/Gambarino-Regular.otf') format("opentype"),
-    url('./fonts/Gambarino-Regular.ttf') format("truetype"),
-    url('./fonts/Gambarino-Regular.woff') format("woff"),
-    url('./fonts/Gambarino-Regular.woff2') format("woff2");
+    url('./assets/fonts/Gambarino-Regular.otf') format("opentype"),
+    url('./assets/fonts/Gambarino-Regular.ttf') format("truetype"),
+    url('./assets/fonts/Gambarino-Regular.woff') format("woff"),
+    url('./assets/fonts/Gambarino-Regular.woff2') format("woff2");
 }
 
 @font-face {
@@ -122,10 +122,10 @@
   font-display: swap;
   src: 
     local('Switzer'),
-    url('./fonts/Switzer-Regular.otf') format("opentype"),
-    url('./fonts/Switzer-Regular.ttf') format("truetype"),
-    url('./fonts/Switzer-Regular.woff') format("woff"),
-    url('./fonts/Switzer-Regular.woff2') format("woff2");
+    url('./assets/fonts/Switzer-Regular.otf') format("opentype"),
+    url('./assets/fonts/Switzer-Regular.ttf') format("truetype"),
+    url('./assets/fonts/Switzer-Regular.woff') format("woff"),
+    url('./assets/fonts/Switzer-Regular.woff2') format("woff2");
 }
 
 @font-face {
@@ -135,10 +135,10 @@
   font-display: swap;
   src: 
     local('Switzer'),
-    url('./fonts/Switzer-Light.otf') format("opentype"),
-    url('./fonts/Switzer-Light.ttf') format("truetype"),
-    url('./fonts/Switzer-Light.woff') format("woff"),
-    url('./fonts/Switzer-Light.woff2') format("woff2");
+    url('./assets/fonts/Switzer-Light.otf') format("opentype"),
+    url('./assets/fonts/Switzer-Light.ttf') format("truetype"),
+    url('./assets/fonts/Switzer-Light.woff') format("woff"),
+    url('./assets/fonts/Switzer-Light.woff2') format("woff2");
 }
 
 
