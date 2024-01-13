@@ -8,6 +8,8 @@ import Header from './components/header/header'
 import Colors from './components/colors/colors'
 import Forms from './components/forms/forms'
 import Footer from './components/footer/footer'
+import ViewportAnimations from './components/viewport-animations/viewport-animations'
+import ScrollAnimations from './components/scroll-animations/scroll-animations'
 
 export const lenis = new Lenis()
 
@@ -26,8 +28,10 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Typography />
         <Colors />
+        <Typography />
+        <ViewportAnimations />
+        <ScrollAnimations />
         <Forms />
         <Footer />
       </main>

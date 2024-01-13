@@ -1,0 +1,79 @@
+.viewportAnimations {
+  padding: var(--space-2xl) var(--page-margin);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+  max-width: 60ch;
+  text-align: center;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+}
+
+.card {
+  border: 1px solid var(--color-foreground-secondary);
+  background-color: var(--color-foreground);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--space-sm);
+  align-items: center;
+  text-align: center;
+  padding: var(--space-xl) var(--space-md);
+  opacity: 1;
+  translate: 0 0;
+  rotate: 0deg;
+  scale: 1;
+  filter: blur(0px);
+  transition: all var(--anim-lg);
+
+  & .emoji {
+    font-size: 8vw;
+  }
+
+  & .cardText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2xs);
+  }
+
+  & .cardTitle {
+    color: var(--color-background);
+  }
+
+  & .cardDescription {
+    composes: caption from '../../index.css';
+    color: var(--color-background-secondary);
+  }
+  
+  &[data-animate="true"]:nth-child(1) {
+    translate: 10vw 5vh;
+    rotate: 55deg;
+    scale: 0.2;
+    opacity: 0;
+  }
+
+  &[data-animate="true"]:nth-child(2) {
+    transform: skew(23deg, 8deg);
+    scale: 1.5;
+    opacity: 0;
+  }
+
+  &[data-animate="true"]:nth-child(3) {
+    filter: blur(40px);
+    opacity: 0;
+  }
+  
+}
+

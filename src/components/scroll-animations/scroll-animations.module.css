@@ -1,0 +1,37 @@
+.scrollAnimations {
+  min-height: 300lvh;
+
+}
+
+.scrollContainer {
+  width: 100%;
+  position: sticky;
+  height: 100lvh;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  /* rotate: -2deg; */
+}
+
+.cardWrapper {
+  padding: 0 var(--page-margin);
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-sm);
+  align-self: flex-start;
+  --scroll-threshold: 0.3;
+  translate: calc((-100% + 100vw) * var(--clamped-scroll-ratio));
+}
+
+.card {
+  aspect-ratio: 2 / 3;
+  width: 20vw;
+  background-color: var(--color-foreground);
+  border-radius: var(--radius-sm);
+}

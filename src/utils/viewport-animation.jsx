@@ -1,8 +1,8 @@
-const isBidirectional = false
+const isBidirectional = true
 
 const options = {
-  rootMargin: "0px",
-  threshold: 0.8,
+  rootMargin: "50% 0% 10% 0%",
+  threshold: 0.6,
 };
 
 const callback = (entries, observer) => {
@@ -12,8 +12,6 @@ const callback = (entries, observer) => {
     if (entry.isIntersecting) {
 
       let delay = 0
-
-      // console.log(entry.target.dataset)
 
       if (entry.target.dataset.animationDelay) {
         delay = entry.target.dataset.animationDelay
@@ -32,8 +30,9 @@ const callback = (entries, observer) => {
   });
 };
 
-const observer = new IntersectionObserver(callback, options);
+const viewportAnimationObserver = new IntersectionObserver(callback, options);
 
-export const initObserver = (element) => {
-  observer.observe(element)
+export const initViewportAnimation = (element) => {
+  element.dataset.animate = true
+  viewportAnimationObserver.observe(element)
 }

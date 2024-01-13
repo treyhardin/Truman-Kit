@@ -3,7 +3,7 @@ import Input from '../form-fields/input'
 import styles from './forms.module.css'
 import Toggle from '../form-fields/toggle'
 import Range from '../form-fields/range'
-import { initObserver } from '../../utils/intersection-observer'
+import { initViewportAnimation } from '../../utils/viewport-animation'
 
 export default function Forms() {
 
@@ -23,7 +23,7 @@ export default function Forms() {
     <section class={styles.formsSection}>
       <div class={styles.formsInner}>
 
-        <div class={styles.titleSection} data-animate="true" ref={el => initObserver(el)}>
+        <div class={styles.titleSection} ref={el => initViewportAnimation(el)}>
           <h2 class="h3">Custom Forms</h2>
           <p>Styling HTML forms is a pain in the ass. I don't ever wanna write custom styles for forms again, so this kit includes the most common field types with easy-to-update styling tokens. Still got some work to do on accessibility, but so far it ain't too shabby.</p>
         </div>
