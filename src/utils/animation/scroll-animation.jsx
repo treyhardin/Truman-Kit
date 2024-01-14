@@ -40,7 +40,17 @@ export default function ScrollAnimation(props) {
   };
   
   const scrollAnimationObserver = new IntersectionObserver(callback, options);
-  scrollAnimationObserver.observe(childElement())
+
+  if (childElement().length > 1) {
+    for (let i = 0; i < childElement().length; i++) {
+      scrollAnimationObserver.observe(childElement()[i])
+    }
+    console.warn("<ScrollAnimation> component should probably only have 1 child element.")
+  } else {
+    scrollAnimationObserver.observe(childElement())
+  }
+
+  
 
   return <>{childElement()}</>
 }

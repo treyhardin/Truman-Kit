@@ -9,6 +9,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 var(--page-margin);
+  translate: 0 0;
+  transition: translate var(--anim-lg);
+}
+
+header[data-animate-load="true"] {
+  translate: 0 -100%;
 }
 
 .navigation {

@@ -1,4 +1,4 @@
-# Truman Starter Kit
+# Truman Kit
 A simple, performant & aesthetic toolkit built on Solid.js and optimized for nice frontend apps. [Live Demo](https://truman-kit.vercel.app/)
 
 - Super lightweight, with only Solid.js and Lenis as dependencies - making it fast AF.
@@ -122,7 +122,8 @@ body[dark-mode = "true"] {
 ```
 
 ### ⚡️ Custom Animation
-Animation in the kit is primarily based on CSS properties & transitions. To extend the native capabilities of CSS, we've also included helpers for both *Viewport* and *Scroll* animations. These are simple, lightweight wrappers built around native browser capabilities, especially the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
+Animation in the kit is primarily based on CSS properties & transitions. To extend the native capabilities of CSS, we've also included helpers for *Page Load*, *Viewport* and *Scroll* animations. These are simple, lightweight wrappers built around native browser capabilities, especially the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API).
+
 
 #### Viewport Animations
 CSS doesn't currently support transitions triggered when an element comes into view, but the [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) gives us everything we need to do just that. 
@@ -166,6 +167,35 @@ This attribute is then used to create 'before' styling in CSS that helps you tra
 }
 
 ```
+
+#### Page Load Animations
+Because we can't depend on an Intersection Observer event to fire at the right time for above-the-fold elements, we've included a dedicated `<PageLoadAnimation>` component specifically for `onLoad` animations. Any element wrapped in this component will get a `[data-animate-load="true"]` which is removed by a `DOMContentLoaded` listener. This ensures you're not artifically delaying page load, but still get control of CSS page load animations. This is particularly useful for header, hero, and preloader elements.
+
+*Example Component:*
+```javascript
+<section class={styles.heroSection}>
+  <PageLoadAnimation>
+    <div class={styles.sectionTitle}>
+      <h1 class={styles.heading}>Heading</h1>
+      <p class={styles.subheading}>Subheading.</p>
+    </div>
+    <button title='Get Started'>Get Started</button>
+  </PageLoadAnimation>
+</section>
+```
+
+*Example CSS:*
+```CSS
+.sectionTitle {
+  transition: opacity var(--anim-lg), translate var(--anim-lg);
+}
+
+.sectionTitle[data-animate-load="true"] {
+    opacity: 0;
+    translate: 0 60%;
+}
+```
+
 
 #### Scroll Animations
 Any element wrapped in `<ScrollAnimation>` will get a custom property `--scroll-ratio` that ranges from 0-1, with 0 being the position at which the section has just entered the viewport and 1 when the section has fully left the viewport. This can be used in CSS values to animate just about anything.

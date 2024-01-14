@@ -2,8 +2,12 @@ import { children, mergeProps } from "solid-js";
 
 export default function ViewportAnimation(props) {
     
-  const childElement = children(() => props.children)
-  childElement().dataset.animate = true
+  const childElements = children(() => props.children)
+
+  // if (childElements().length > 1) {
+  //   return console.warn("<PageLoadAnimation> component should only have 1 child element.")
+  // }
+
 
 
   const defaultSettings = {
@@ -38,7 +42,16 @@ export default function ViewportAnimation(props) {
   };
 
   const viewportAnimationObserver = new IntersectionObserver(callback, options);
-  viewportAnimationObserver.observe(childElement())
 
-  return <>{childElement()}</>
+  if (childElements().length > 1) {
+    for (let i = 0; i < childElements().length; i++) {
+      childElements()[i].dataset.animate = true
+      viewportAnimationObserver.observe(childElements()[i])
+    }
+  } else {
+    childElements().dataset.animate = true
+    viewportAnimationObserver.observe(childElements())
+  }
+
+  return <>{childElements()}</>
 }
