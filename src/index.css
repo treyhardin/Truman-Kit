@@ -1,20 +1,19 @@
 * {
+  /* Browser Fixes */
   box-sizing: border-box;
   min-width: 0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   
+  /* Fluid Font Calculations */
   --viewport-desktop: 1440; /* The width of the desktop designs */
   --viewport-mobile: 375; /* The width of the mobile designs */
-  
-  /* The range between mobile and desktop viewport sizes */
-  --viewport-range: calc( var(--viewport-desktop) - var(--viewport-mobile) ); 
-  
-  /* Calculate how wide the current viewport is, relative to the mobile and desktop viewport sizes */
+
+  --viewport-range: calc( var(--viewport-desktop) - var(--viewport-mobile) );
   --viewport-percent: calc( (100vw - (var(--viewport-mobile) * 1px)) / var(--viewport-range) ); 
-  
-  /* The range between mobile and desktop font sizes */
   --font-size-range: calc( var(--font-size-desktop) - var(--font-size-mobile) ); 
-  
-  /* A normalization equation that takes the range in font size and maps it between our mobile breakpoint and desktop breakpoint */
   --fluid-font-size: calc( var(--font-size-range) * var(--viewport-percent) + (var(--font-size-mobile)) * 1px );
 
   /* Scroll Animation Helpers */
@@ -24,15 +23,6 @@
 }
 
 :root {
-
-  /* Browser Fixes */
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-
-  color: var(--color-foreground);
-  background-color: var(--color-background);
 
   /* Typography */
   --font-primary: 'Gambarino', Georgia, serif;
@@ -55,6 +45,9 @@
   --color-error: #D94745;
   --color-error-contrast: var(--color-reverse);
   --color-focus: #9050D9;
+
+  color: var(--color-foreground);
+  background-color: var(--color-background);
 
   /* Gradients */
   --gradient-primary: linear-gradient(135deg, var(--color-brand) 0%, var(--color-light) 100%);
@@ -245,11 +238,11 @@ a:hover {
 }
 
 body {
+  --font-size-desktop: 16;
+  --font-size-mobile: 14;
   color: var(--color-foreground);
   background-color: var(--color-background);
   font-family: var(--font-secondary);
-  --font-size-desktop: 16;
-  --font-size-mobile: 14;
   letter-spacing: -0.02em;
   min-height: 100lvh;
   margin: 0;
@@ -257,14 +250,13 @@ body {
 }
 
 input {
-  font-family: var(--font-secondary);
   --font-size-desktop: 16;
   --font-size-mobile: 14;
+  font-family: var(--font-secondary);
 }
 
 p {
   color: inherit;
-  /* color: var(--color-foreground); */
 }
 
 .caption {
@@ -292,8 +284,6 @@ input[type="submit"] {
 
 button:hover,
 input[type="submit"]:hover {
-  /* background-color: var(--color-foreground);
-  color: var(--color-background); */
   background-color: var(--color-brand-secondary);
   color: var(--color-brand-secondary-contrast);
 }
@@ -306,7 +296,6 @@ input[type="submit"]:focus-visible {
 button.button--secondary {
   background-color: var(--color-brand-secondary);
   color: var(--color-brand-secondary-contrast);
-  /* border: 1px solid var(--color-brand-secondary); */
 }
 
 button.button--secondary:hover {
@@ -323,6 +312,7 @@ form {
   align-items: stretch;
   gap: var(--form-gap-vertical);
 }
+
 
 /* Images */
 

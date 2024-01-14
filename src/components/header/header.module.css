@@ -78,9 +78,6 @@ header[data-animate-load="true"] {
       & ~ .switchThumb {
         translate: 100% -50%;
 
-        & .switchIcons {
-        }
-
         & .iconDark {
           opacity: 1;
           translate: 0 0;
@@ -125,7 +122,6 @@ header[data-animate-load="true"] {
       bottom: 0;
       left: 0;
       transition: opacity var(--anim-sm), translate var(--anim-sm);
-      /* width: 100%; */
     }
 
     & .iconDark {

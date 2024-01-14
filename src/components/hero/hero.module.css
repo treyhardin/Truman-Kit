@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  min-height: 95lvh;
+  min-height: 95svh;
   padding: var(--header-height) var(--page-margin) var(--space-lg);
   text-align: left;
   gap: var(--space-md);
