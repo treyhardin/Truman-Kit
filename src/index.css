@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  min-width: 0;
   
   --viewport-desktop: 1440; /* The width of the desktop designs */
   --viewport-mobile: 375; /* The width of the mobile designs */
