@@ -58,7 +58,6 @@ export default function ScrollAnimations() {
                   <h4 class={styles.cardTitle}>{card.title}</h4>
                 </div>
                 <p class={styles.cardDescription}>{card.description}</p>
-                {/* <p class={styles.cardEmoji}>{card.emoji}</p> */}
               </div>
             }</For>
           </div>

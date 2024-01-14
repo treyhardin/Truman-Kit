@@ -92,17 +92,13 @@
 }
 
 .cardTitle {
-  composes: h6 from '../../index.css';
+  composes: h5 from '../../index.css';
   /* color: var(--color-background); */
 }
 
 .cardDescription {
   composes: caption from '../../index.css';
   /* color: var(--color-background-secondary); */
-}
-
-.cardTitle {
-  composes: h6 from '../../index.css';
 }
 
 @media screen and (max-width: 768px) {
