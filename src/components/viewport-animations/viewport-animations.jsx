@@ -1,4 +1,4 @@
-import { initViewportAnimation } from '../../utils/viewport-animation'
+import ViewportAnimation from '../../utils/animation/viewport-animation'
 import styles from './viewport-animations.module.css'
 
 export default function ViewportAnimations() {
@@ -13,29 +13,35 @@ export default function ViewportAnimations() {
       </div>
       <div class={styles.content}>
 
-        <div class={styles.card} data-animation-delay={0 * cardDelay} ref={el => initViewportAnimation(el)}>
-          <p class={styles.emoji}>⚖️</p>
-          <div class={styles.cardText}>
-            <h3 class={styles.cardTitle}>100% CSS-Based</h3>
-            <p class={styles.cardDescription}>There's nothing wrong with all those fancy animation libraries, but who needs dependencies when you're a CSS god? Slap some CSS transition and some fancy transforms on your element and call it a day.</p>
+        <ViewportAnimation bidirectional={true} delay={0 * cardDelay}>
+          <div class={styles.card}>
+            <p class={styles.emoji}>⚖️</p>
+            <div class={styles.cardText}>
+              <h3 class={styles.cardTitle}>100% CSS-Based</h3>
+              <p class={styles.cardDescription}>There's nothing wrong with all those fancy animation libraries, but who needs dependencies when you're a CSS god? Slap some CSS transition and some fancy transforms on your element and call it a day.</p>
+            </div>
           </div>
-        </div>
+        </ViewportAnimation>
 
-        <div class={styles.card} data-animation-delay={1 * cardDelay} ref={el => initViewportAnimation(el)}>
-          <p class={styles.emoji}>🚦</p>
-          <div class={styles.cardText}>
-            <h3 class={styles.cardTitle}>Easy Staggering</h3>
-            <p class={styles.cardDescription}>Add a data attribute for delay within a loop and voilá, there's your staggered animation. Not the most groundbreaking stuff, but it's one less thing you have to figure out yourself.</p>
+        <ViewportAnimation bidirectional={true} delay={1 * cardDelay}>
+          <div class={styles.card}>
+            <p class={styles.emoji}>🚦</p>
+            <div class={styles.cardText}>
+              <h3 class={styles.cardTitle}>Easy Staggering</h3>
+              <p class={styles.cardDescription}>Add a data attribute for delay within a loop and voilá, there's your staggered animation. Not the most groundbreaking stuff, but it's one less thing you have to figure out yourself.</p>
+            </div>
           </div>
-        </div>
+        </ViewportAnimation>
 
-        <div class={styles.card} data-animation-delay={2 * cardDelay} ref={el => initViewportAnimation(el)}>
-          <p class={styles.emoji}>🎚</p>
-          <div class={styles.cardText}>
-            <h3 class={styles.cardTitle}>Configurable & Scalable</h3>
-            <p class={styles.cardDescription}>Ultimately, it's just a bit of syntactic sugar on top of the browser-native Intersection Observer API. Use as many observers as you want, tweak the settings, do whatever and you probably still won't break much.</p>
+        <ViewportAnimation bidirectional={true} delay={2 * cardDelay}>
+          <div class={styles.card}>
+            <p class={styles.emoji}>🎚</p>
+            <div class={styles.cardText}>
+              <h3 class={styles.cardTitle}>Configurable & Scalable</h3>
+              <p class={styles.cardDescription}>Ultimately, it's just a bit of syntactic sugar on top of the browser-native Intersection Observer API. Use as many observers as you want, tweak the settings, do whatever and you probably still won't break much.</p>
+            </div>
           </div>
-        </div>
+        </ViewportAnimation>
 
       </div>
 

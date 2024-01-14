@@ -1,28 +1,22 @@
-## Usage
+# Truman Starter Kit
+A simple, performant & aesthetic toolkit based on Solid.js optimized for nice frontend apps. [Live Demo](https://truman-kit.vercel.app/)
+
+
+## Get Started
+
+1. **Clone the Repo**
+Use the install command or download the .zip from the Github repo.
 
 ```bash
-$ npm install # or pnpm install or yarn install
+gh repo clone treyhardin/Truman-Kit
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+2. **Install Dependencies**
+Open a terminal in the project root and run the install command:
+```bash
+npm i
+```
 
-## Available Scripts
+3. **Have Fun!**
 
-In the project directory, you can run:
 
-### `npm run dev`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
-
-### `npm run build`
-
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-## Deployment
-
-Learn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)

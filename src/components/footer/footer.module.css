@@ -12,6 +12,7 @@
   max-width: 70ch;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: var(--space-xs);
   opacity: 1;
   transition: opacity var(--anim-lg), translate var(--anim-lg);

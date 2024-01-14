@@ -1,6 +1,5 @@
 .scrollAnimations {
   min-height: 300lvh;
-
 }
 
 .scrollContainer {
@@ -26,7 +25,7 @@
   gap: var(--space-sm);
   align-self: flex-start;
   --scroll-threshold: 0.3;
-  translate: calc((-100% + 100vw) * var(--clamped-scroll-ratio));
+  translate: calc((-100% + 100vw) * var(--scroll-ratio));
 }
 
 .card {

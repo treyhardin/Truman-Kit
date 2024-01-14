@@ -4,7 +4,7 @@ import viteLogo from '../../assets/logos/vite.svg'
 import lenisLogo from '../../assets/logos/lenis.svg'
 import cssModulesLogo from '../../assets/logos/css-modules.svg'
 import { For } from 'solid-js'
-import { initViewportAnimation } from '../../utils/viewport-animation'
+import ViewportAnimation from '../../utils/animation/viewport-animation'
 
 export default function About() {
 
@@ -53,23 +53,27 @@ export default function About() {
     <section class={styles.aboutSection}>
       <div class={styles.aboutInner}>
 
-        <div class={styles.titleWrapper} ref={el => initViewportAnimation(el)}>
-          <h2 class="h2">We all have our own favorite way of building front-end apps.</h2>
-          <p>This just happens to be mine. Take it or leave it, but this is the tech stack I've found to be the current best balance of simplicity, flexibility, and performance.</p>
-        </div>
+        <ViewportAnimation>
+          <div class={styles.titleWrapper}>
+            <h2 class="h2">We all have our own favorite way of building front-end apps.</h2>
+            <p>This just happens to be mine. Take it or leave it, but this is the tech stack I've found to be the current best balance of simplicity, flexibility, and performance.</p>
+          </div>
+        </ViewportAnimation>
 
         <div class={styles.cardsWrapper}>
 
           <For each={platforms}>{(platform, i) => 
-            <a class={styles.card} href={platform.link} data-animation-delay={i() * cardStagger} target='_blank' ref={el => initViewportAnimation(el)}>
-              <div class={styles.cardText}>
-                <p class="">{platform.name}</p>
-                <p class={styles.platformDescription}>{platform.description}</p>
-              </div>
-              <Show when={platform.logo}>
-                <img class={styles.cardLogo} src={platform.logo} alt={`Logo for ${platform.name}`} />
-              </Show>
-            </a>
+            <ViewportAnimation delay={i() * cardStagger}>
+              <a class={styles.card} href={platform.link} target='_blank'>
+                <div class={styles.cardText}>
+                  <p class="">{platform.name}</p>
+                  <p class={styles.platformDescription}>{platform.description}</p>
+                </div>
+                <Show when={platform.logo}>
+                  <img class={styles.cardLogo} src={platform.logo} alt={`Logo for ${platform.name}`} />
+                </Show>
+              </a>
+            </ViewportAnimation>
           }</For>
 
         </div>
