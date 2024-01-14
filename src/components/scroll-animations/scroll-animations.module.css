@@ -1,7 +1,7 @@
 .scrollAnimations {
   min-height: 300lvh;
-  background-color: var(--color-brand-secondary);
-  color: var(--color-brand-secondary-contrast);
+  /* background-color: var(--color-background-secondary); */
+  /* color: var(--color-foreground); */
 }
 
 .scrollContainer {
@@ -18,6 +18,15 @@
   /* rotate: -2deg; */
 }
 
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3xs);
+  text-align: center;
+  max-width: 40ch;
+}
+
 .cardWrapper {
   padding: 0 var(--page-margin);
   width: max-content;
@@ -32,7 +41,34 @@
 
 .card {
   aspect-ratio: 2 / 3;
-  width: 20vw;
-  background-color: var(--color-reverse);
+  width: 25vw;
+  min-width: 200px;
+  background-color: var(--color-brand-secondary);
+  color: var(--color-brand-secondary-contrast);
   border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* justify-content: flex-end; */
+  padding: var(--space-xs) var(--space-xs);
+  gap: var(--space-2xs);
+}
+
+.cardEmoji {
+  font-size: 2em;
+}
+
+.cardText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xs);
+}
+
+.cardTitle {
+  composes: h6 from '../../index.css';
+}
+
+.cardDescription {
+  /* composes: caption from '../../index.css'; */
+
 }
