@@ -24,7 +24,7 @@
   align-items: center;
   gap: var(--space-3xs);
   text-align: center;
-  max-width: 40ch;
+  max-width: 80%;
 }
 
 .cardWrapper {
@@ -41,7 +41,7 @@
 
 .card {
   aspect-ratio: 2 / 3;
-  width: 25vw;
+  width: 20vw;
   min-width: 200px;
   background-color: var(--color-brand-secondary);
   color: var(--color-brand-secondary-contrast);
