@@ -124,15 +124,23 @@
   .swatchesBrand {
     & .colorSwatch {
       aspect-ratio: 1 / 1;
+      flex: 0 1 50%;
     }
   }
 
   .swatchesUtility {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    /* display: grid;
+    grid-template-columns: repeat(2, 1fr); */
   
     & .colorSwatch {
-      aspect-ratio: 2 / 1;
-      flex: 1 0 30%;
+      /* aspect-ratio: 2 / 1; */
+      aspect-ratio: unset;
+      flex: 1 1 50%;
+      flex-direction: row;
+      align-items: center;
+      padding-block: var(--space-md);
     }
   }
 }

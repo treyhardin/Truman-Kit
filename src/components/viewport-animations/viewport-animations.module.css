@@ -2,32 +2,43 @@
   padding: var(--space-2xl) var(--page-margin);
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
   align-items: center;
   gap: var(--space-md);
-  /* overflow: hidden; */
+  min-height: 100lvh;
+  overflow: hidden;
 }
 
 .sectionTitle {
   display: flex;
   flex-direction: column;
   gap: var(--space-2xs);
-  max-width: 60ch;
+  max-width: 60%;
   text-align: center;
 }
 
 .content {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm); */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
   gap: var(--space-sm);
+
 }
 
 .card {
-  border: 1px solid var(--color-foreground-secondary);
-  background-color: var(--color-foreground);
+  aspect-ratio: 4 / 5;
+  max-height: 60lvh;
+  background: var(--gradient-primary);
+  color: var(--gradient-primary-contrast);
   border-radius: var(--radius-lg);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  /* justify-content: flex-start; */
   gap: var(--space-sm);
   align-items: center;
   text-align: center;
@@ -73,7 +84,9 @@
 }
 
 .emoji {
-  font-size: 8vw;
+  font-size: 7em;
+  aspect-ratio: 1 / 1;
+  vertical-align: middle;
 }
 
 .cardText {
@@ -84,12 +97,12 @@
 
 .cardTitle {
   composes: h6 from '../../index.css';
-  color: var(--color-background);
+  /* color: var(--color-background); */
 }
 
 .cardDescription {
   composes: caption from '../../index.css';
-  color: var(--color-background-secondary);
+  /* color: var(--color-background-secondary); */
 }
 
 .cardTitle {
@@ -106,7 +119,10 @@
   }
 
   .card {
-    width: 80%;
+    max-height: unset;
+    justify-content: center;
+    aspect-ratio: unset;
+    max-width: 400px;
   }
 
 }

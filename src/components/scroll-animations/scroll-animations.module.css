@@ -43,14 +43,15 @@
   aspect-ratio: 2 / 3;
   width: 20vw;
   min-width: 200px;
-  background-color: var(--color-brand-secondary);
-  color: var(--color-brand-secondary-contrast);
+  background: var(--gradient-secondary);
+  /* background-color: var(--color-brand-secondary); */
+  color: var(--gradient-secondary-contrast);
   border-radius: var(--radius-sm);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /* justify-content: flex-end; */
-  padding: var(--space-xs) var(--space-xs);
+  padding: var(--space-sm) var(--space-xs);
   gap: var(--space-2xs);
 }
 

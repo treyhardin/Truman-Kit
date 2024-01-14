@@ -56,6 +56,11 @@
   --color-error-contrast: var(--color-reverse);
   --color-focus: #9050D9;
 
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, var(--color-brand) 0%, var(--color-light) 100%);
+  --gradient-primary-contrast: var(--color-ink);
+  --gradient-secondary: linear-gradient(135deg, var(--color-brand-secondary) 0%, var(--color-light) 100%);
+  --gradient-secondary-contrast: var(--color-ink);
 
   /* Spacing & Sizing */
   --space-3xl: 120px;
@@ -299,13 +304,14 @@ input[type="submit"]:focus-visible {
 }
 
 button.button--secondary {
-  background-color: transparent;
-  border: 1px solid var(--color-brand-secondary);
+  background-color: var(--color-brand-secondary);
+  color: var(--color-brand-secondary-contrast);
+  /* border: 1px solid var(--color-brand-secondary); */
 }
 
 button.button--secondary:hover {
-  background-color: var(--color-brand-secondary);
-  color: var(--color-brand-secondary-contrast);
+  background-color: var(--color-brand);
+  color: var(--color-brand-contrast);
 }
 
 
