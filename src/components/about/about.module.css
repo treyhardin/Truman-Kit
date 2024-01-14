@@ -1,6 +1,5 @@
 .aboutSection {
-  /* background-color: var(--color-background-secondary); */
-  background: linear-gradient(180deg, var(--color-background) 0%, var(--color-background-secondary) 45% 55%, var(--color-background) 100%);
+  /* background: linear-gradient(180deg, var(--color-background) 0%, var(--color-background-secondary) 45% 55%, var(--color-background) 100%); */
 }
 
 .aboutInner {

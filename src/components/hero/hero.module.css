@@ -7,6 +7,7 @@
   padding: var(--header-height) var(--page-margin) var(--space-xl);
   text-align: center;
   gap: var(--space-md);
+  background: linear-gradient(0deg, var(--color-background) 0%, var(--color-background-secondary) 100%);
 }
 
 .sectionTitle {

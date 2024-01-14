@@ -27,10 +27,10 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Colors />
-        <Typography />
         <ViewportAnimations />
+        <Colors />
         <ScrollAnimations />
+        <Typography />
         <Forms />
         <Footer />
       </main>

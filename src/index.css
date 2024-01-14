@@ -287,8 +287,10 @@ input[type="submit"] {
 
 button:hover,
 input[type="submit"]:hover {
-  background-color: var(--color-foreground);
-  color: var(--color-background);
+  /* background-color: var(--color-foreground);
+  color: var(--color-background); */
+  background-color: var(--color-brand-secondary);
+  color: var(--color-brand-secondary-contrast);
 }
 
 button:focus-visible,
