@@ -10,6 +10,7 @@ A simple, performant & aesthetic toolkit built on Solid.js and optimized for nic
 ## Get Started
 
 1. **Clone the Repo**
+
 Use the install command or download the .zip from the Github repo.
 
 ```bash
@@ -17,12 +18,14 @@ gh repo clone treyhardin/Truman-Kit
 ```
 
 2. **Install Dependencies**
+
 Open a terminal in the project root and run the install command:
 ```bash
 npm i
 ```
 
 3. **Have Fun!**
+
 The purpose of this starter kit is to make development easier and more fun for frontend-focused projects. Now that you're set up, keep reading for details on the quality of life features built into the starter kit.
 
 ## Toolkit
