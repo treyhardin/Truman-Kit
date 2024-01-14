@@ -13,6 +13,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-md);
+  padding: var(--header-height) 0 var(--space-lg);
 }
 
 .sectionTitle {
@@ -26,27 +27,31 @@
 }
 
 .cardWrapper {
+  max-height: 60lvh;
   padding: 0 var(--page-margin);
   width: max-content;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: stretch;
   gap: var(--space-sm);
+  justify-self: stretch;
   align-self: flex-start;
-  --scroll-threshold: 0.3;
   translate: calc((-100% + 100vw) * var(--scroll-ratio));
 }
 
 .card {
-  aspect-ratio: 2 / 3;
-  width: 20vw;
-  min-width: 200px;
+  aspect-ratio: 4 / 5;
+  min-width: 0px;
+  min-height: 0px;
+  max-height: 100%;
   background: var(--gradient-secondary);
   color: var(--gradient-secondary-contrast);
   border-radius: var(--radius-sm);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   padding: var(--space-sm) var(--space-xs);
   gap: var(--space-2xs);
 }
@@ -59,14 +64,19 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3xs);
+  width: 100%;
 }
 
 .cardTitle {
-  composes: h6 from '../../index.css';
+  composes: h5 from '../../index.css';
 }
 
 @media screen and (max-width: 768px) {
   .sectionTitle {
     max-width: 100%;
+  }
+
+  .cardWrapper {
+    max-height: 50lvh;
   }
 }
