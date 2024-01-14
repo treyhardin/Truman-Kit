@@ -251,7 +251,7 @@ body {
 
 input {
   --font-size-desktop: 16;
-  --font-size-mobile: 14;
+  --font-size-mobile: 16; /* Any size below 16 here will cause mobile browser to zoom in. */
   font-family: var(--font-secondary);
 }
 

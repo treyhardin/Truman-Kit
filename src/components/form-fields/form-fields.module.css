@@ -6,12 +6,13 @@
 }
 
 .input {
-  composes: caption from '../../index.css';
+  /* composes: caption from '../../index.css'; */
   position: relative;
   height: var(--form-field-height);
 }
 
 .label {
+  composes: caption from '../../index.css';
   position: absolute;
   top: 50%;
   translate: 0 -50%;
