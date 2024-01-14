@@ -1,9 +1,10 @@
 # Truman Starter Kit
 A simple, performant & aesthetic toolkit built on Solid.js and optimized for nice frontend apps. [Live Demo](https://truman-kit.vercel.app/)
 
-- Super lightweight, with only Solid.js and Lenis as dependencies making it fast AF.
+- Super lightweight, with only Solid.js and Lenis as dependencies - making it fast AF.
 - Best practices included out-of-the-box, with 100% Lighthouse scores all around.
 - Built for nice design, with fluid typography, smooth scrolling, animation helpers, and more.
+- Robust set of CSS variables make it fast to make global changes, while still giving scalable granular control over styling.
 
 
 ## Get Started
