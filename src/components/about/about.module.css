@@ -28,12 +28,12 @@
 
 .cardsWrapper {
   flex: 0 1 50%;
-  /* display: grid;
-  grid-template-columns: repeat(3, 1fr); */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-xs);
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
   /* min-width: 0px; */
 }
 
@@ -65,7 +65,7 @@
   color: var(--color-background);
 }
 
-.cardLogo {
+.card svg {
   flex: 0 0 80px;
 }
 
@@ -81,4 +81,16 @@
 .platformDescription {
   composes: import caption from '../../index.css';
   color: var(--secondary-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .cardsWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cardsWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

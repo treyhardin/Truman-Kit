@@ -172,7 +172,7 @@ label {
 
 h1,
 .h1 {
-  --font-size-desktop: 100;
+  --font-size-desktop: 160;
   --font-size-mobile: 54;
   font-family: var(--font-primary);
   font-weight: 400;

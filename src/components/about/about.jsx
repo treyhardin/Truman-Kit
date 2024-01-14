@@ -1,10 +1,7 @@
 import styles from './about.module.css'
-import solidLogo from '../../assets/logos/solid.svg'
-import viteLogo from '../../assets/logos/vite.svg'
-import lenisLogo from '../../assets/logos/lenis.svg'
-import cssModulesLogo from '../../assets/logos/css-modules.svg'
 import { For } from 'solid-js'
 import ViewportAnimation from '../../utils/animation/viewport-animation'
+import Icon from '../../utils/icons'
 
 export default function About() {
 
@@ -13,40 +10,40 @@ export default function About() {
   const platforms = [
     {
       name: "Solid.js",
-      logo: solidLogo,
       description: "Simple & Lightweight Reactivity",
+      logo: "solid-js",
       link: "https://www.solidjs.com/"
     },
     {
       name: "Vite",
-      logo: viteLogo,
       description: "Quick & Easy Builds",
+      logo: "vite",
       link: "https://vitejs.dev/"
     },
     {
       name: "CSS Modules",
-      logo: cssModulesLogo,
       description: "Scalable Component Styling",
+      logo: "css-modules",
       link: "https://github.com/css-modules/css-modules"
     },
     {
       name: "Lenis",
-      logo: lenisLogo,
       description: "Fancy Smooth Scrolling",
+      logo: "lenis",
       link: "https://lenis.studiofreight.com/"
     },
     {
       name: "Intersection Observer API",
-      // logo: lenisLogo,
       description: "Viewport Transitions",
-      link: "https://lenis.studiofreight.com/"
+      logo: "intersection-observer",
+      link: "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
     },
-    {
-      name: "Scroll-Driven Animations",
-      // logo: lenisLogo,
-      description: "Viewport Transitions",
-      link: "https://lenis.studiofreight.com/"
-    },
+    // {
+    //   name: "Scroll-Driven Animations",
+    //   // logo: lenisLogo,
+    //   description: "Viewport Transitions",
+    //   link: "https://lenis.studiofreight.com/"
+    // },
   ]
 
   return (
@@ -69,9 +66,10 @@ export default function About() {
                   <p class="">{platform.name}</p>
                   <p class={styles.platformDescription}>{platform.description}</p>
                 </div>
-                <Show when={platform.logo}>
+                <Icon icon={platform.logo} />
+                {/* <Show when={platform.logo}>
                   <img class={styles.cardLogo} src={platform.logo} alt={`Logo for ${platform.name}`} />
-                </Show>
+                </Show> */}
               </a>
             </ViewportAnimation>
           }</For>

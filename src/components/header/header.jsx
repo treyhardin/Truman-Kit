@@ -22,7 +22,7 @@ export default function Header() {
     <PageLoadAnimation>
       <header>
         <div class={styles.navigation}>
-          <a href="#" class={styles.logo}>Welp.</a>
+          <a href="#" class={styles.logo}>🤷🏻‍♂️  Truman Kit.</a>
         </div>
         <div class={styles.links}>
           <a 

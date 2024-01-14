@@ -1,11 +1,11 @@
 .heroSection {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 90lvh;
-  padding: var(--header-height) var(--page-margin) var(--space-xl);
-  text-align: center;
+  justify-content: flex-end;
+  align-items: flex-start;
+  min-height: 95lvh;
+  padding: var(--header-height) var(--page-margin) var(--space-lg);
+  text-align: left;
   gap: var(--space-md);
   background: linear-gradient(0deg, var(--color-background) 0%, var(--color-background-secondary) 100%);
 }
@@ -14,6 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-xs);
+  max-width: 75%;
   transition: opacity var(--anim-lg), translate var(--anim-lg);
 }
 
@@ -38,4 +39,11 @@
 .button[data-animate-load="true"] {
   opacity: 0;
   translate: 0 60%;
+}
+
+@media screen and (max-width: 768px) {
+  .sectionTitle {
+    max-width: 100%;
+  }
+  
 }

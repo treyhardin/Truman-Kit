@@ -6,7 +6,7 @@ export default function Footer() {
     <footer class={styles.footer}>
       <ViewportAnimation>
         <div class={styles.sectionTitle} data-animate="true">
-          <h1>Welp, That's All I Got For You Folks.</h1>
+          <h2>Welp, That's All I Got For You Folks.</h2>
           <p>I'm gonna keep on updating this project as I continue to use it, so check back every now and then and see if there's anything worth trying out.</p>
           <button 
             class="button--secondary"

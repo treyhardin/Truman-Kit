@@ -40,20 +40,21 @@
   transition: all var(--anim-lg);
   
   &[data-animate="true"]:nth-child(1) {
-    translate: 10vw 5vh;
-    rotate: 55deg;
-    scale: 0.2;
+    translate: 60px 0;
+    rotate: 85deg;
+    scale: 0.1;
     opacity: 0;
   }
 
   &[data-animate="true"]:nth-child(2) {
     transform: skew(23deg, 8deg);
-    scale: 1.5;
+    scale: 1.1;
     opacity: 0;
   }
 
   &[data-animate="true"]:nth-child(3) {
     filter: blur(40px);
+    translate: 0 60px;
     opacity: 0;
   }
 
