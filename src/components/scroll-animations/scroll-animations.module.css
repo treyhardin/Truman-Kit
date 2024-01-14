@@ -1,7 +1,5 @@
 .scrollAnimations {
   min-height: 300lvh;
-  /* background-color: var(--color-background-secondary); */
-  /* color: var(--color-foreground); */
 }
 
 .scrollContainer {
@@ -15,7 +13,6 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-md);
-  /* rotate: -2deg; */
 }
 
 .sectionTitle {
@@ -25,6 +22,7 @@
   gap: var(--space-3xs);
   text-align: center;
   max-width: 80%;
+  padding: 0 var(--page-margin);
 }
 
 .cardWrapper {
@@ -44,13 +42,11 @@
   width: 20vw;
   min-width: 200px;
   background: var(--gradient-secondary);
-  /* background-color: var(--color-brand-secondary); */
   color: var(--gradient-secondary-contrast);
   border-radius: var(--radius-sm);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* justify-content: flex-end; */
   padding: var(--space-sm) var(--space-xs);
   gap: var(--space-2xs);
 }
@@ -69,7 +65,8 @@
   composes: h6 from '../../index.css';
 }
 
-.cardDescription {
-  /* composes: caption from '../../index.css'; */
-
+@media screen and (max-width: 768px) {
+  .sectionTitle {
+    max-width: 100%;
+  }
 }
