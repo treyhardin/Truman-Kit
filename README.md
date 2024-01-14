@@ -63,7 +63,6 @@ In this case, `h1` (the element) and `.h1` (the class) will calculate to 54px at
 ### 🎨 Accessible Color System
 Color definitions in this project are broken out into *Fundamentals* and *Tokens* and are defined in `index.css`. 
 
-
 #### Fundamentals
 All your core project colors will be set as Fundamentals. The naming of each color property is intentionally abstracted to follow some inherent rules that help with accessibility:
 
@@ -217,4 +216,9 @@ All spacing within the kit is defined using *Spacing Tokens*. In `index.css` we 
 }
 ```
 
-**☝️ Note:** Further development of the spacing system may include a more fluid approach to spacing tokens that scales similarly to how typography scales. The current approach relies on breakpoints for any spacing values that need to change between viewport sizes.
+**☝️ Coming Soon:** Further development of the spacing system may include a more fluid approach to spacing tokens that scales similarly to how typography scales. The current approach relies on breakpoints for any spacing values that need to change between viewport sizes.
+
+### Notes
+This is just a personal project I built to make my personal projects easier to spin up. I'd love to hear thoughts on how it can be further improved or built out, so don't be a stranger.
+
+*Designed and Developed by [Trey Hardin](https://trumancreative.co/). Get in touch at [hello@trumancreative.co](mailto:hello@trumancreative.co).*
