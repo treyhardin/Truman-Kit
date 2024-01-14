@@ -12,7 +12,7 @@
   gap: var(--space-lg);
 }
 
-.titleWrapper {
+.sectionTitle {
   position: sticky;
   top: var(--header-height);
   flex: 1 0 50%;
@@ -23,7 +23,7 @@
   transition: transform var(--anim-lg), opacity var(--anim-lg);
 }
 
-.titleWrapper[data-animate="true"] {
+.sectionTitle[data-animate="true"] {
   transform: var(--anim-skew-in);
   opacity: 0;
 }
@@ -46,6 +46,12 @@
 }
 
 @media screen and (max-width: 768px) {
+
+  .sectionTitle {
+    position: relative;
+    top: unset;
+  }
+
   .typographyInner {
     flex-direction: column;
   }

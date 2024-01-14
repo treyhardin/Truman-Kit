@@ -16,7 +16,7 @@
   width: 100%;
 }
 
-.titleSection {
+.sectionTitle {
   position: sticky;
   top: var(--header-height);
   flex: 0 1 50%;
@@ -56,5 +56,12 @@
 
   .formsInner {
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .sectionTitle {
+    position: relative;
+    top: 0;
   }
 }

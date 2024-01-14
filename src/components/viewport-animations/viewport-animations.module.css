@@ -81,3 +81,18 @@
 .cardTitle {
   composes: h6 from '../../index.css';
 }
+
+@media screen and (max-width: 768px) {
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-sm);
+  }
+
+  .card {
+    width: 80%;
+  }
+
+}

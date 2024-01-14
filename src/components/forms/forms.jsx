@@ -24,7 +24,7 @@ export default function Forms() {
       <div class={styles.formsInner}>
 
         <ViewportAnimation>
-          <div class={styles.titleSection}>
+          <div class={styles.sectionTitle}>
             <h2 class="h3">Custom Forms</h2>
             <p>Styling HTML forms is a pain in the ass. I don't ever wanna write custom styles for forms again, so this kit includes the most common field types with easy-to-update styling tokens. Still got some work to do on accessibility, but so far it ain't too shabby.</p>
           </div>

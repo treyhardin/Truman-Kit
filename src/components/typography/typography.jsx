@@ -7,7 +7,7 @@ export default function Typography() {
       <div class={styles.typographyInner}>
 
         <ViewportAnimation>
-        <div class={styles.titleWrapper}>
+        <div class={styles.sectionTitle}>
           <h2 class="h3">Fluid Typography</h2>
           <p>Good type isn't about breakpoints, it's about creating a good experience for users regardless of device. The approach we've taken to typography is all about fluid scaling — you plug in a desktop and mobile font size, and CSS figures out the rest.</p>
         </div>
