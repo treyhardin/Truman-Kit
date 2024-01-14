@@ -1,5 +1,5 @@
 # Truman Starter Kit
-A simple, performant & aesthetic toolkit based on Solid.js optimized for nice frontend apps. [Live Demo](https://truman-kit.vercel.app/)
+A simple, performant & aesthetic toolkit built on Solid.js and optimized for nice frontend apps. [Live Demo](https://truman-kit.vercel.app/)
 
 
 ## Get Started
@@ -219,6 +219,6 @@ All spacing within the kit is defined using *Spacing Tokens*. In `index.css` we 
 **☝️ Coming Soon:** Further development of the spacing system may include a more fluid approach to spacing tokens that scales similarly to how typography scales. The current approach relies on breakpoints for any spacing values that need to change between viewport sizes.
 
 ### Notes
-This is just a personal project I built to make my personal projects easier to spin up. I'd love to hear thoughts on how it can be further improved or built out, so don't be a stranger.
+This is just a personal tool I built to make my side projects easier to spin up. I'd love to hear thoughts on how it can be further improved or built out, so don't be a stranger.
 
 *Designed and Developed by [Trey Hardin](https://trumancreative.co/). Get in touch at [hello@trumancreative.co](mailto:hello@trumancreative.co).*
