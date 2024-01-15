@@ -6,7 +6,6 @@
 }
 
 .input {
-  /* composes: caption from '../../index.css'; */
   position: relative;
   height: var(--form-field-height);
 }
@@ -30,7 +29,7 @@
 
 .inputField {
   border: 1px solid var(--form-stroke-color);
-  border-radius: var(--radius-sm);
+  border-radius: var(--form-field-radius);
   background-color: var(--color-background);
   color: var(--color-foreground);
   padding: 0 var(--space-2xs);

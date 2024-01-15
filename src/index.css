@@ -32,10 +32,10 @@
   --color-ink: #232325; 
   --color-subdued: #414144;
   --color-neutral: #8E8E8E;
-  --color-light: #dfdacc;
+  --color-light: #DFDACC;
   --color-reverse: #FAF5E5;
 
-  --color-brand: #595bcb;
+  --color-brand: #595BCB;
   --color-brand-contrast: var(--color-reverse);
   --color-brand-secondary: #D9D850;
   --color-brand-secondary-contrast: var(--color-ink);
@@ -71,16 +71,17 @@
 
   /* Forms */
   --form-field-height: 40px;
+  --form-field-radius: var(--radius-sm);
   --form-field-color: var(--color-brand);
   --form-field-color-contrast: var(--color-reverse);
   --form-stroke-color: var(--color-neutral);
   --form-gap-vertical: var(--space-xs);
   --form-gap-horizontal: var(--space-2xs);
-
   --form-toggle-size: 14px;
 
   /* Buttons */
   --button-height: var(--form-field-height);
+  --button-radius: var(--radius-lg);
 
   /* Border Radius */
   --radius-sm: 5px;
@@ -270,7 +271,7 @@ button,
 input[type="submit"] {
   --font-size-desktop: 18;
   --font-size-mobile: 14;
-  border-radius: var(--radius-lg);
+  border-radius: var(--button-radius);
   padding: var(--space-2xs) var(--space-sm);
   border: 1px solid transparent;
   font-weight: 400;

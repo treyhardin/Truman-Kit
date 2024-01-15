@@ -19,8 +19,9 @@ export default function Footer() {
       </ViewportAnimation>
       <div class={styles.footerNavigation}>
         <div class={styles.footerLinks}>
+          <a href="https://www.figma.com/community/file/1328853610130359786/truman-kit" class={styles.footerLink} target='_blank'>Figma File</a>
           <a href="https://github.com/treyhardin/Truman-Kit" class={styles.footerLink} target='_blank'>Github</a>
-          <a href="https://trumancreative.co/" class={styles.footerLink} target='_blank'>Truman Creative</a>
+          {/* <a href="https://trumancreative.co/" class={styles.footerLink} target='_blank'>Truman Creative</a> */}
         </div>
         <div class={styles.footerInfo}>
           <p>&#169; 2024 Truman Creative Co.</p>
