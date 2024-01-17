@@ -6,142 +6,23 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  /* Fluid Font Calculations */
-  --viewport-desktop: 1440; /* The width of the desktop designs */
-  --viewport-mobile: 375; /* The width of the mobile designs */
-
-  --viewport-range: calc( var(--viewport-desktop) - var(--viewport-mobile) );
-  --viewport-percent: calc( (100vw - (var(--viewport-mobile) * 1px)) / var(--viewport-range) ); 
-  --font-size-range: calc( var(--font-size-desktop) - var(--font-size-mobile) ); 
-  --fluid-font-size: calc( var(--font-size-range) * var(--viewport-percent) + (var(--font-size-mobile)) * 1px );
-
-  /* Scroll Animation Helpers */
-  --scroll-threshold: 0;
-  --normalized-scroll-ratio: calc( (var(--scroll-ratio) - var(--scroll-threshold) / 2) / (1 - var(--scroll-threshold)));
-  --clamped-scroll-ratio: clamp(0, var(--normalized-scroll-ratio), 1);
 }
 
 :root {
-
-  /* Typography */
-  --font-primary: 'Gambarino', Georgia, serif;
-  --font-secondary: 'Switzer', Helvetica, sans-serif;
-
-  /* Colors */
-  --color-ink: #232325; 
-  --color-subdued: #414144;
-  --color-neutral: #8E8E8E;
-  --color-light: #DFDACC;
-  --color-reverse: #FAF5E5;
-
-  --color-brand: #595BCB;
-  --color-brand-contrast: var(--color-reverse);
-  --color-brand-secondary: #D9D850;
-  --color-brand-secondary-contrast: var(--color-ink);
-
-  --color-success: #50D998;
-  --color-success-contrast: var(--color-ink);
-  --color-error: #D94745;
-  --color-error-contrast: var(--color-reverse);
-  --color-focus: #9050D9;
-
   color: var(--color-foreground);
   background-color: var(--color-background);
-
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, var(--color-brand) 0%, var(--color-light) 100%);
-  --gradient-primary-contrast: var(--color-ink);
-  --gradient-secondary: linear-gradient(135deg, var(--color-brand-secondary) 0%, var(--color-light) 100%);
-  --gradient-secondary-contrast: var(--color-ink);
-
-  /* Spacing & Sizing */
-  --space-3xl: 120px;
-  --space-2xl: 80px;
-  --space-xl: 60px;
-  --space-lg: 40px;
-  --space-md: 30px;
-  --space-sm: 20px;
-  --space-xs: 15px;
-  --space-2xs: 10px;
-  --space-3xs: 5px;
-
-  --page-margin: var(--space-md);
-  --header-height: 80px;
-
-  /* Forms */
-  --form-field-height: 40px;
-  --form-field-radius: var(--radius-sm);
-  --form-field-color: var(--color-brand);
-  --form-field-color-contrast: var(--color-reverse);
-  --form-stroke-color: var(--color-neutral);
-  --form-gap-vertical: var(--space-xs);
-  --form-gap-horizontal: var(--space-2xs);
-  --form-toggle-size: 14px;
-
-  /* Buttons */
-  --button-height: var(--form-field-height);
-  --button-radius: var(--radius-lg);
 
   /* Border Radius */
   --radius-sm: 5px;
   --radius-lg: 10px;
   --radius-rounded: 100vw;
 
-  /* Animations */
-  --anim-easing: cubic-bezier(0.16, 1, 0.3, 1);
-  --anim-sm: 0.3s var(--anim-easing);
-  --anim-md: 0.6s var(--anim-easing);
-  --anim-lg: 1.2s var(--anim-easing);
-
-  --anim-skew-in: skew(0, 3deg) translateY(40px);
 
   /* Icons */
   --icon-sm: 10px;
   --icon-md: 18px;
   --icon-lg: 24px;
 
-}
-
-/* Font Imports */
-
-@font-face {
-  font-family: 'Gambarino';
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  src: 
-    /* local('Gambarino'), */
-    url('/fonts/Gambarino-Regular.otf') format("opentype"),
-    url('/fonts/Gambarino-Regular.ttf') format("truetype"),
-    url('/fonts/Gambarino-Regular.woff') format("woff"),
-    url('/fonts/Gambarino-Regular.woff2') format("woff2");
-}
-
-@font-face {
-  font-family: 'Switzer';
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: 
-    /* local('Switzer'), */
-    url('/fonts/Switzer-Regular.otf') format("opentype"),
-    url('/fonts/Switzer-Regular.ttf') format("truetype"),
-    url('/fonts/Switzer-Regular.woff') format("woff"),
-    url('/fonts/Switzer-Regular.woff2') format("woff2");
-}
-
-@font-face {
-  font-family: 'Switzer';
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-  src: 
-    /* local('Switzer'), */
-    url('/fonts/Switzer-Light.otf') format("opentype"),
-    url('/fonts/Switzer-Light.ttf') format("truetype"),
-    url('/fonts/Switzer-Light.woff') format("woff"),
-    url('/fonts/Switzer-Light.woff2') format("woff2");
 }
 
 
@@ -152,117 +33,14 @@ html {
 
 /* Typography Styles */
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6,
-p,
-a,
-ul,
-.caption,
-button,
-input,
-label {
-  font-size: max( var(--fluid-font-size), calc(var(--font-size-mobile) * 1px) );
-  margin: 0;
-}
 
-h1,
-.h1 {
-  --font-size-desktop: 160;
-  --font-size-mobile: 54;
-  font-family: var(--font-primary);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.95;
-}
-
-h2,
-.h2 {
-  --font-size-desktop: 80;
-  --font-size-mobile: 44;
-  font-family: var(--font-primary);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.95;
-}
-
-h3,
-.h3 {
-  --font-size-desktop: 58;
-  --font-size-mobile: 38;
-  font-family: var(--font-primary);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.95;
-}
-
-h4,
-.h4 {
-  --font-size-desktop: 46;
-  --font-size-mobile: 32;
-  font-family: var(--font-primary);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.95;
-}
-
-h5,
-.h5 {
-  --font-size-desktop: 36;
-  --font-size-mobile: 28;
-  font-family: var(--font-primary);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 0.95;
-}
-
-h6,
-.h6 {
-  --font-size-desktop: 26;
-  --font-size-mobile: 22;
-  font-family: var(--font-secondary);
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 0.95;
-}
-
-a {
-  color: var(--color-link);
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: var(--color-link-hover);
-}
 
 body {
-  --font-size-desktop: 16;
-  --font-size-mobile: 14;
   color: var(--color-foreground);
   background-color: var(--color-background);
-  font-family: var(--font-secondary);
-  letter-spacing: -0.02em;
   min-height: 100lvh;
   margin: 0;
   padding: 0;
-}
-
-input {
-  --font-size-desktop: 16;
-  --font-size-mobile: 16; /* Any size below 16 here will cause mobile browser to zoom in. */
-  font-family: var(--font-secondary);
-}
-
-p {
-  color: inherit;
-}
-
-.caption {
-  --font-size-desktop: 12;
-  --font-size-mobile: 12;
 }
 
 /* Buttons */
@@ -305,16 +83,6 @@ button.button--secondary:hover {
 }
 
 
-/* Forms */
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: var(--form-gap-vertical);
-}
-
-
 /* Images */
 
 img,
@@ -350,29 +118,4 @@ html.lenis {
 
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
-}
-
-
-/* Color Schemes */
-
-body[dark-mode = "false"] {
-  --color-foreground: var(--color-ink);
-  --color-foreground-secondary: var(--color-subdued);
-
-  --color-background: var(--color-reverse);
-  --color-background-secondary: var(--color-light);
-
-  --color-link: var(--color-brand);
-  --color-link-hover: var(--color-brand-secondary);
-}
-
-body[dark-mode = "true"] {
-  --color-foreground: var(--color-reverse);
-  --color-foreground-secondary: var(--color-light);
-
-  --color-background: var(--color-ink);
-  --color-background-secondary: var(--color-subdued);
-
-  --color-link: var(--color-brand);
-  --color-link-hover: var(--color-brand-secondary);
 }

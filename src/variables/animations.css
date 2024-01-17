@@ -1,0 +1,9 @@
+/* :root {
+
+  --anim-easing: cubic-bezier(0.16, 1, 0.3, 1);
+  --anim-sm: 0.3s var(--anim-easing);
+  --anim-md: 0.6s var(--anim-easing);
+  --anim-lg: 1.2s var(--anim-easing);
+
+  --anim-skew-in: skew(0, 3deg) translateY(40px);
+} */

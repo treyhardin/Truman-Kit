@@ -92,13 +92,11 @@
 }
 
 .cardTitle {
-  composes: h5 from '../../index.css';
-  /* color: var(--color-background); */
+  composes: h5 from '../../variables/typography.css';
 }
 
 .cardDescription {
-  composes: caption from '../../index.css';
-  /* color: var(--color-background-secondary); */
+  composes: caption from '../../variables/typography.css';
 }
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,20 @@
+/* :root {
+
+  --form-field-height: 40px;
+  --form-field-radius: var(--radius-sm);
+  --form-gap-vertical: var(--space-xs);
+  --form-gap-horizontal: var(--space-2xs);
+  --form-toggle-size: 14px;
+
+  --form-field-color: var(--color-brand);
+  --form-field-color-contrast: var(--color-reverse);
+  --form-stroke-color: var(--color-neutral);
+
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--form-gap-vertical);
+} */

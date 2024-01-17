@@ -1,0 +1,24 @@
+:root {
+
+  --space-3xl: 120px;
+  --space-2xl: 80px;
+  --space-xl: 60px;
+  --space-lg: 40px;
+  --space-md: 30px;
+  --space-sm: 20px;
+  --space-xs: 15px;
+  --space-2xs: 10px;
+  --space-3xs: 5px;
+
+  --page-margin: var(--space-md);
+  --header-height: 80px;
+
+  --radius-sm: 5px;
+  --radius-lg: 10px;
+  --radius-rounded: 100vw;
+
+  --icon-sm: 10px;
+  --icon-md: 18px;
+  --icon-lg: 24px;
+
+}

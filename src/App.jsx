@@ -1,4 +1,11 @@
 import './App.css'
+import './variables/typography.css'
+import './variables/colors.css'
+import './variables/forms.css'
+import './variables/layout.css'
+import './variables/buttons.css'
+import './variables/animations.css'
+
 import Lenis from '@studio-freight/lenis'
 import Hero from './components/hero/hero'
 import About from './components/about/about'

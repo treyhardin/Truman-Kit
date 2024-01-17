@@ -1,0 +1,160 @@
+@font-face {
+  font-family: 'Gambarino';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: 
+    local('Gambarino'),
+    url('../assets/fonts/Gambarino-Regular.otf') format("woff2"),
+    url('../assets/fonts/Gambarino-Regular.otf') format("opentype"),
+    url('../assets/fonts/Gambarino-Regular.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Switzer';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: 
+    local('Switzer'),
+    url('../assets/fonts/Switzer-Light.otf'),
+    url('../assets/fonts/Switzer-Light.woff2') format("woff2"),
+    url('../assets/fonts/Switzer-Light.otf') format("opentype"),
+    url('../assets/fonts/Switzer-Light.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Switzer';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: 
+    local('Switzer'),
+    url('../assets/fonts/Switzer-Regular.otf'),
+    url('../assets/fonts/Switzer-Regular.woff2') format("woff2"),
+    url('../assets/fonts/Switzer-Regular.otf') format("opentype"),
+    url('../assets/fonts/Switzer-Regular.ttf') format("truetype");
+}
+
+* {  
+  --viewport-desktop: 1440;
+  --viewport-mobile: 375;
+
+  --viewport-range: calc( var(--viewport-desktop) - var(--viewport-mobile) );
+  --viewport-percent: calc( (100vw - (var(--viewport-mobile) * 1px)) / var(--viewport-range) ); 
+  --font-size-range: calc( var(--font-size-desktop) - var(--font-size-mobile) ); 
+  --fluid-font-size: calc( var(--font-size-range) * var(--viewport-percent) + (var(--font-size-mobile)) * 1px );
+}
+
+:root {
+  --font-primary: 'Gambarino', Georgia, serif;
+  --font-secondary: 'Switzer', Helvetica, sans-serif;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6,
+p,
+a,
+ul,
+.caption,
+button,
+input,
+label {
+  font-size: max( var(--fluid-font-size), calc(var(--font-size-mobile) * 1px) );
+  margin: 0;
+}
+
+h1,
+.h1 {
+  --font-size-desktop: 160;
+  --font-size-mobile: 54;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h2,
+.h2 {
+  --font-size-desktop: 80;
+  --font-size-mobile: 44;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h3,
+.h3 {
+  --font-size-desktop: 58;
+  --font-size-mobile: 38;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h4,
+.h4 {
+  --font-size-desktop: 46;
+  --font-size-mobile: 32;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h5,
+.h5 {
+  --font-size-desktop: 36;
+  --font-size-mobile: 28;
+  font-family: var(--font-primary);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+h6,
+.h6 {
+  --font-size-desktop: 26;
+  --font-size-mobile: 22;
+  font-family: var(--font-secondary);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+body {
+  --font-size-desktop: 16;
+  --font-size-mobile: 14;
+  font-family: var(--font-secondary);
+  letter-spacing: -0.02em;
+}
+
+input {
+  --font-size-desktop: 16;
+  --font-size-mobile: 16; 
+  font-family: var(--font-secondary);
+}
+
+p {
+  color: inherit;
+}
+
+.caption {
+  --font-size-desktop: 12;
+  --font-size-mobile: 12;
+}

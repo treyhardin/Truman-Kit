@@ -1,0 +1,50 @@
+:root {
+
+  --color-ink: #232325; 
+  --color-subdued: #414144;
+  --color-neutral: #8E8E8E;
+  --color-light: #DFDACC;
+  --color-reverse: #FAF5E5;
+
+  --color-brand: #595BCB;
+  --color-brand-contrast: var(--color-reverse);
+  --color-brand-secondary: #D9D850;
+  --color-brand-secondary-contrast: var(--color-ink);
+
+  --color-success: #50D998;
+  --color-success-contrast: var(--color-ink);
+  --color-error: #D94745;
+  --color-error-contrast: var(--color-reverse);
+  --color-focus: #9050D9;
+
+  --gradient-primary: linear-gradient(135deg, var(--color-brand) 0%, var(--color-light) 100%);
+  --gradient-primary-contrast: var(--color-ink);
+  --gradient-secondary: linear-gradient(135deg, var(--color-brand-secondary) 0%, var(--color-light) 100%);
+  --gradient-secondary-contrast: var(--color-ink);
+
+}
+
+
+
+
+body[dark-mode = "false"] {
+  --color-foreground: var(--color-ink);
+  --color-foreground-secondary: var(--color-subdued);
+
+  --color-background: var(--color-reverse);
+  --color-background-secondary: var(--color-light);
+
+  --color-link: var(--color-brand);
+  --color-link-hover: var(--color-brand-secondary);
+}
+
+body[dark-mode = "true"] {
+  --color-foreground: var(--color-reverse);
+  --color-foreground-secondary: var(--color-light);
+
+  --color-background: var(--color-ink);
+  --color-background-secondary: var(--color-subdued);
+
+  --color-link: var(--color-brand);
+  --color-link-hover: var(--color-brand-secondary);
+}

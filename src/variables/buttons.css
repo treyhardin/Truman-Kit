@@ -1,0 +1,4 @@
+:root {
+  --button-height: var(--form-field-height);
+  --button-radius: var(--radius-lg);
+}
